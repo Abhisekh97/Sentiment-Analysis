@@ -18,5 +18,5 @@ Flask
 Flask-Cors
 scipy
 nltk
-opendatasets
+kaggle
 -e .
