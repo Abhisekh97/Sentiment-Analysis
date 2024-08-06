@@ -46,11 +46,10 @@ After running the above statements, you will be prompted for the Kaggle username
     ```
 After providing the above credentials, the data set files will be downloaded into your working environment (either local or any other platform). If there is no issue in downloading, then the message looks something like this
 
-Please provide your Kaggle credentials to download this dataset. Learn more: http://bit.ly/kaggle-creds Your Kaggle username: <userID> Your Kaggle Key: ········ Downloading dl-course-data.zip to ./dl-course-data
+Please provide your Kaggle credentials to download this dataset. Your Kaggle username: <userID> Your Kaggle Key: <AccessKey> Downloading <dataset> 
 
     100%|██████████| 231M/231M [00:03<00:00, 64.4MB/s]
 
-For the data set which we are working on, related files will be downloaded into the dir named /dl-course-data(You can get the dir name from the above message). Now that we have all the files in our working environment, let’s list them.
 
 1. Dataset [kaggle link](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews/data)
 
