@@ -8,6 +8,23 @@ Author-email: abhisekhagarwala97@gmail.com
 Project-URL: Bug Tracker, https://github.com/Abhisekh97/Sentiment-Analysis/issues
 Description-Content-Type: text/markdown
 
-# Sentiment-Analysis
+# Sentiment-Analysis 
+This is an end to end Sentiment Analysis Project . Dataset used in this project is taken from kaggle. Link of the dataset is provided below. Here the dataset size is huge so for demonstration purpose i have only worked with 50000 rows of data randomely sampled from the original dataset. You can Use the entire dataset if you wish. 
 
-1. Dataset [download](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews/data)
+1. Dataset [kaggle link](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews/data)
+
+## Project Workflows
+
+1. Update config.yaml
+2. Update secrets.yaml [Optional]
+3. Update params.yaml
+4. Update the entity
+5. Update the configuration manager in src config
+6. Update the components
+7. Update the pipeline 
+8. Update the main.py
+9. Update the dvc.yaml
+
+
+
+
