@@ -1,7 +1,7 @@
 import os
 from sentiment_analysis.constants import *
-from sentiment_analysis.utils.common import read_yaml, create_directories
-from sentiment_analysis.entity.configuration_entity import DataIngestionConfig, PrepareBaseModelConfig, TrainingConfig
+from sentiment_analysis.utils.common import read_yaml, create_directories, save_json
+from sentiment_analysis.entity.configuration_entity import DataIngestionConfig, PrepareBaseModelConfig, TrainingConfig, EvaluationConfig
 
 class ConfigurationManager:
     def __init__(self,
@@ -67,3 +67,18 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+    def get_evaluation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            path_of_model=Path(self.config.training.trained_model_path),
+            path_of_stemmer=Path(self.config.training.trained_stemmer_path),
+            path_of_stopwords=Path(self.config.training.trained_stop_words_path),
+            path_of_vectorizer=Path(self.config.training.trained_vectorizer_path),
+            training_data=Path(self.config.evaluation.dataset_path),
+            mlflow_uri=self.config.evaluation.ml_flow_tracking_url,
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE,
+            params_data_size=self.params.DATA_SIZE
+        )
+        return eval_config

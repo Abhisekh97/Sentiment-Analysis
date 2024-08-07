@@ -1,2 +1,7 @@
 artifacts/*
-src/Sentiment_Analysis.egg-info*
+src/Sentiment_Analysis.egg-info/dependency_links.txt
+src/Sentiment_Analysis.egg-info/PKG-info
+src/Sentiment_Analysis.egg-info/SOURCES.txt
+src/Sentiment_Analysis.egg-info/top_level.txt
+scores.json
+mlruns/*

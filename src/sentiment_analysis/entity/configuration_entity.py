@@ -36,4 +36,16 @@ class TrainingConfig:
     trained_vectorizer_path:Path
     trained_stemmer_path: Path
 
-    
+
+@dataclass(frozen=True)
+class EvaluationConfig:
+    path_of_model: Path
+    path_of_stemmer: Path
+    path_of_stopwords: Path
+    path_of_vectorizer: Path
+    training_data: Path
+    all_params: dict
+    mlflow_uri: str
+    params_image_size: list
+    params_batch_size: int
+    params_data_size: int

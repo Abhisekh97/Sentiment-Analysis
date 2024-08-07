@@ -21,3 +21,8 @@ training:
   trained_stop_words_path: artifacts/training/english_stop_words.pkl
   trained_vectorizer_path: artifacts/training/vectorizer.pkl
   trained_stemmer_path: artifacts/training/stemmer.pkl
+
+evaluation:
+  dataset_path: artifacts/data_ingestion/Reviews.csv
+  ml_flow_tracking_url: "https://dagshub.com/Abhisekh97/Sentiment-Analysis.mlflow"
+  

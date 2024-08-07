@@ -65,6 +65,16 @@ Please provide your Kaggle credentials to download this dataset. Your Kaggle use
 8. Update the main.py
 9. Update the dvc.yaml
 
+## MLflow Basic Operations with Dagshub
+
+
+
+### For Dags hub
+```
+export MLFLOW_TRACKING_USERNAME=<username>
+export MLFLOW_TRACKING_PASSWORD=<password/token>
+```
+
 
 
 

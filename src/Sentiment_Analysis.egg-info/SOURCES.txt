@@ -7,6 +7,8 @@ src/Sentiment_Analysis.egg-info/top_level.txt
 src/sentiment_analysis/__init__.py
 src/sentiment_analysis/components/__init__.py
 src/sentiment_analysis/components/data_ingestion.py
+src/sentiment_analysis/components/model_evaluation_mlflow.py
+src/sentiment_analysis/components/model_trainer.py
 src/sentiment_analysis/components/prepare_base_model.py
 src/sentiment_analysis/config/__init__.py
 src/sentiment_analysis/config/configuration.py
@@ -16,6 +18,8 @@ src/sentiment_analysis/entity/configuration_entity.py
 src/sentiment_analysis/pipeline/__init__.py
 src/sentiment_analysis/pipeline/stage_01_data_ingestion.py
 src/sentiment_analysis/pipeline/stage_02_prepare_base_model.py
+src/sentiment_analysis/pipeline/stage_03_model_trainer.py
+src/sentiment_analysis/pipeline/stage_04_model_evaluation.py
 src/sentiment_analysis/utils/__init__.py
 src/sentiment_analysis/utils/common.py
 src/sentiment_analysis/utils/logger.py
