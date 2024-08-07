@@ -77,14 +77,12 @@ Please provide your Kaggle credentials to download this dataset. Your Kaggle use
 
 ## MLflow Basic Operations with Dagshub
 
-export MLFLOW_TRACKING_USERNAME=<username>
-export MLFLOW_TRACKING_PASSWORD=<password/token>
+
 
 ### For Dags hub
 ```
-export MLFLOW_TRACKING_URI=https://dagshub.com/Abhisekh97/Sentiment-Analysis.mlflow
-export MLFLOW_TRACKING_USERNAME=Abhisekh97
-export MLFLOW_TRACKING_PASSWORD=e12c7e4532103970e861e89538098f94326b9c6e
+export MLFLOW_TRACKING_USERNAME=<username>
+export MLFLOW_TRACKING_PASSWORD=<password/token>
 ```
 
 

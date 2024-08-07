@@ -16,6 +16,7 @@ src/sentiment_analysis/constants/__init__.py
 src/sentiment_analysis/entity/__init__.py
 src/sentiment_analysis/entity/configuration_entity.py
 src/sentiment_analysis/pipeline/__init__.py
+src/sentiment_analysis/pipeline/inference_pipeline.py
 src/sentiment_analysis/pipeline/stage_01_data_ingestion.py
 src/sentiment_analysis/pipeline/stage_02_prepare_base_model.py
 src/sentiment_analysis/pipeline/stage_03_model_trainer.py
