@@ -5,3 +5,4 @@ src/Sentiment_Analysis.egg-info/SOURCES.txt
 src/Sentiment_Analysis.egg-info/top_level.txt
 scores.json
 mlruns/*
+dvc.lock

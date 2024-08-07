@@ -1,0 +1,63 @@
+stages:
+  data_ingestion:
+    cmd: python src/sentiment_analysis/pipeline/stage_01_data_ingestion.py
+    deps:
+      - src/sentiment_analysis/pipeline/stage_01_data_ingestion.py
+      - config/config.yaml
+    outs:
+      - artifacts/data_ingestion/Reviews.csv
+
+
+  prepare_base_model:
+    cmd: python src/sentiment_analysis/pipeline/stage_02_prepare_base_model.py
+    deps:
+      - src/sentiment_analysis/pipeline/stage_02_prepare_base_model.py
+      - config/config.yaml
+    params:
+      - IMAGE_SIZE
+      - INCLUDE_TOP
+      - CLASSES
+      - WEIGHTS
+      - LEARNING_RATE
+      - DATA_SIZE
+    outs:
+      - artifacts/prepare_base_model
+
+  training:
+    cmd: python src/sentiment_analysis/pipeline/stage_03_model_trainer.py
+    deps:
+      - src/sentiment_analysis/pipeline/stage_03_model_trainer.py
+      - config/config.yaml
+      - artifacts/data_ingestion/Reviews.csv
+      - artifacts/prepare_base_model
+    params:
+      - IMAGE_SIZE
+      - EPOCHS
+      - BATCH_SIZE
+      - AUGMENTATION
+      - DATA_SIZE
+    outs:
+      # - artifacts/training/model.h5
+      - artifacts/training/logistic_regression_model.pkl
+      - artifacts/training/stemmer.pkl
+      - artifacts/training/vectorizer.pkl
+      - artifacts/training/english_stop_words.pkl
+
+
+  evaluation:
+    cmd: python src/sentiment_analysis/pipeline/stage_04_model_evaluation.py
+    deps:
+      - src/sentiment_analysis/pipeline/stage_04_model_evaluation.py
+      - config/config.yaml
+      - artifacts/data_ingestion/Reviews.csv
+      - artifacts/training/logistic_regression_model.pkl
+      - artifacts/training/stemmer.pkl
+      - artifacts/training/vectorizer.pkl
+      - artifacts/training/english_stop_words.pkl
+    params:
+      - IMAGE_SIZE
+      - BATCH_SIZE
+      - DATA_SIZE
+    metrics:
+    - scores.json:
+        cache: false

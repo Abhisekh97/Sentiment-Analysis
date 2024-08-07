@@ -5,6 +5,7 @@ from sentiment_analysis.config.configuration import ConfigurationManager
 from sentiment_analysis.utils.logger import Logger
 logger = Logger.__call__().get_logger()
 
+
 class ModelTrainerPipeline:
     def __init__(self) -> None:
         
@@ -21,7 +22,7 @@ class ModelTrainerPipeline:
         
 
 
-
+STAGE_NAME= "Training Pipeline"
 
 if __name__ == '__main__':
     try:
