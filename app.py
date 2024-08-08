@@ -42,7 +42,7 @@ def trainRoute():
 @cross_origin()
 def predictRoute():
     print(request.json)
-    text = request.json['content']
+    text = request.json['text']
     logger.info(f"input_text for inference{text}")
     result = clApp.classifier.predict(text)
     logger.info(f"the model result { result}")
